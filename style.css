@@ -20,14 +20,14 @@ body {
 }
 
 #invitee {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #c2185b; /* pink elegan */
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  color: #c2185b;
+  margin-bottom: 1rem;
   text-align: center;
-  font-family: "Great Vibes", cursive; /* contoh font undangan */
+  font-family: 'Great Vibes', cursive;
 }
+
 
 /* Tombol Musik */
 .music-btn {
@@ -290,5 +290,6 @@ body {
   transform: scale(1.05);
   background: #e6558a;
 }
+
 
 

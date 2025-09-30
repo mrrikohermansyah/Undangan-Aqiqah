@@ -19,7 +19,7 @@ document.addEventListener("click", () => {
 const bgMusic = document.getElementById("bg-music");
 const toggleBtn = document.getElementById("music-toggle");
 
-// aktifkan suara saat pertama kali user klik halaman
+// aktifkan suara setelah ada interaksi pertama
 document.addEventListener(
   "click",
   () => {
@@ -188,4 +188,5 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Countdown error (module):", err);
   }
 });
+
 

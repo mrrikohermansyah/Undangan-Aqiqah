@@ -138,7 +138,7 @@ function escapeHtml(str) {
 document.addEventListener("DOMContentLoaded", () => {
   try {
     // Gunakan konstruktor numeric agar konsisten: monthIndex dimulai 0 => 9 = Oktober
-    const countdownDate = new Date(2025, 9, 10, 10, 0, 0).getTime();
+    const countdownDate = new Date(2025, 9, 11, 13, 0, 0).getTime();
 
     const daysEl = document.getElementById("days");
     const hoursEl = document.getElementById("hours");
@@ -188,5 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Countdown error (module):", err);
   }
 });
+
 
 

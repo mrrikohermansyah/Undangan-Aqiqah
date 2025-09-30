@@ -31,6 +31,7 @@ document.addEventListener(
   { once: true }
 );
 
+// Toggle musik manual
 toggleBtn.addEventListener("click", () => {
   if (bgMusic.paused) {
     bgMusic.play();
@@ -187,3 +188,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Countdown error (module):", err);
   }
 });
+

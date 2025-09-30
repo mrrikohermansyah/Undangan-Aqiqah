@@ -18,12 +18,6 @@ body {
   margin: 2rem auto;
   padding: 1rem;
 }
-.invitee {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--accent);
-}
 
 #invitee {
   font-size: 1.4rem;
@@ -296,4 +290,5 @@ body {
   transform: scale(1.05);
   background: #e6558a;
 }
+
 

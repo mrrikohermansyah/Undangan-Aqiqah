@@ -19,6 +19,10 @@ body {
   padding: 1rem;
 }
 
+.hero h1.salam {
+  font-size: 25px;
+}
+
 #invitee {
   font-size: 1.2rem;
   font-weight: 600;

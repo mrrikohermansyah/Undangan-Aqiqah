@@ -1,0 +1,258 @@
+:root {
+  --bg: #fffaf6;
+  --card: #ffffff;
+  --accent: #e91e63;
+  --muted: #666;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(to bottom, #fff0f6, #ffe6eb);
+  color: #222;
+}
+.container {
+  max-width: 880px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.detail {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.detail h3 {
+  color: #d24a7b;
+}
+
+/* Hero */
+.hero {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.6rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+.hero h1 {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+}
+.hero .subtitle {
+  margin: 0.25rem 0;
+}
+.baby-name {
+  margin: 0.4rem 0;
+  font-size: 1.6rem;
+  color: #d24a7b;
+}
+.event {
+  margin-top: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Countdown */
+.countdown {
+  margin-top: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+#countdown div {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 0.8rem;
+  min-width: 70px;
+}
+#countdown span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: block;
+}
+#countdown small {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.countdown h3 {
+  color: #d24a7b;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center; /* judul rata tengah */
+}
+
+.gallery h3 {
+  margin-bottom: 0.8rem; /* kasih jarak judul dan foto */
+  color: #d24a7b;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center; /* isi grid tetap di tengah */
+}
+
+.gallery-grid img {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-grid img:active {
+  transform: scale(0.95);
+}
+
+/* Guestbook */
+.guestbook {
+  margin-top: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+}
+.guestbook h3 {
+  color: #d24a7b;
+  text-align: center;
+}
+#guestForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+#name {
+  height: 50px;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 0.95rem;
+}
+#status {
+  height: 50px;
+}
+#guestForm textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 0.95rem;
+  resize: none;
+  height: 100px;
+}
+#guestForm button {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.entries {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.entries li {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 0.6rem;
+  background: #fafafa;
+}
+.entries li .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.loader {
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
+.footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+/* Tambahan untuk select hadir/tidak hadir */
+#guestForm select {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 0.95rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+#guestForm select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Lokasi */
+.location {
+  margin-top: 2rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.location h3 {
+  margin-bottom: 0.6rem;
+  color: #d24a7b;
+}
+
+.map-container {
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary, #ff6fa5);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.map-link:hover {
+  transform: scale(1.05);
+  background: #e6558a;
+}

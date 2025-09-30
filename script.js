@@ -11,6 +11,36 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
+//BG MUSIK
+document.addEventListener("click", () => {
+  const audio = document.getElementById("bg-music");
+  audio.muted = false; // aktifkan suara setelah user klik
+});
+const bgMusic = document.getElementById("bg-music");
+const toggleBtn = document.getElementById("music-toggle");
+
+// aktifkan suara saat pertama kali user klik halaman
+document.addEventListener(
+  "click",
+  () => {
+    if (bgMusic.muted) {
+      bgMusic.muted = false;
+      bgMusic.play().catch((err) => console.log("Autoplay gagal:", err));
+    }
+  },
+  { once: true }
+);
+
+toggleBtn.addEventListener("click", () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+    toggleBtn.textContent = "🔊"; // icon nyala
+  } else {
+    bgMusic.pause();
+    toggleBtn.textContent = "🔇"; // icon mati
+  }
+});
+
 // GANTI dengan config Firebase-mu
 const firebaseConfig = {
   apiKey: "AIzaSyAaMCQeaHor_YwzudAjj1MOhYG5IOnmrGw",

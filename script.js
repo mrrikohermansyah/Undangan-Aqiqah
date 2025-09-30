@@ -11,6 +11,16 @@ import {
   limit,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
+// Ambil parameter dari URL
+const urlParams = new URLSearchParams(window.location.search);
+const toName = urlParams.get("to");
+
+// Jika ada, tampilkan di halaman
+if (toName) {
+  const inviteeEl = document.getElementById("invitee");
+  inviteeEl.textContent = "Kepada: " + decodeURIComponent(toName);
+}
+
 //BG MUSIK
 document.addEventListener("click", () => {
   const audio = document.getElementById("bg-music");
@@ -188,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Countdown error (module):", err);
   }
 });
+
 
 
 

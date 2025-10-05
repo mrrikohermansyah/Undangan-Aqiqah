@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Undangan Aqiqah - Aruna Darisa Hermansyah</title>
+    <!--<p id="invitee" class="invitee"></p>-->
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/foto1.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="bg-music" autoplay loop muted>
+      <source src="../music/himawarino.mp3" type="audio/mpeg" />
+      Browser Anda tidak mendukung audio.
+    </audio>
+    <button id="music-toggle" class="music-btn">🔊</button>
+
+    <main class="container">
+      <header class="hero">
+        <h1 class="salam">
+          اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ
+        </h1>
+        <h1>Undangan Aqiqah</h1>
+        <h3 id="invitee"></h3>
+        <p class="subtitle">
+          Dengan segala kerendahan hati kami mengundang Bapak/Ibu/Saudara/i
+          <br />di Acara Aqiqah anak ke-dua kami tercinta:
+        </p>
+
+        <h2 class="baby-name">Aruna Darisa Hermansyah</h2>
+        <p class="parents">
+          Putri dari: <br /> Bapak Riko Hermansyah & Ibu Tiara Anggrainy
+        </p>
+        <p class="grandparents">
+          Cucu dari: <br />
+          Bapak Agustiar & Ibu Erni <br />
+          Bapak Hartono & Ibu Nani Dahlia
+        </p>
+      </header>
+
+      <section class="detail">
+        <h3>🕊 Detail Acara</h3>
+        <p class="event">
+          Acara: Aqiqah & Doa Bersama<br />
+          Waktu: Sabtu, 11 Oktober 2025, 09:00 WIB<br />
+          Tempat: Jl. Korindo Gg. Damai (Gang Depan Pertashop Korindo)
+        </p>
+      </section>
+
+      <!-- Lokasi Acara -->
+      <section class="location">
+        <h3>📍Lokasi Acara</h3>
+        <p>Acara akan diselenggarakan di rumah keluarga kami:</p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4939.912559415568!2d104.5865489758411!3d0.8964180628637056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d96b68bb44de83%3A0x8517b36f12535966!2sRumah%20Pak%20Hartono!5e1!3m2!1sen!2sid!4v1759196542780!5m2!1sen!2sid"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+        <a
+          href="https://maps.app.goo.gl/uYJRnzZXsrxEZo1g8"
+          target="_blank"
+          class="map-link"
+        >
+          Buka di Google Maps
+        </a>
+      </section>
+
+      <!-- Countdown -->
+      <section class="countdown">
+        <h3>🕐 Hitung Mundur Acara</h3>
+        <div id="countdown">
+          <div><span id="days">0</span><small>Hari</small></div>
+          <div><span id="hours">0</span><small>Jam</small></div>
+          <div><span id="minutes">0</span><small>Menit</small></div>
+          <div><span id="seconds">0</span><small>Detik</small></div>
+        </div>
+      </section>
+
+      <!-- Foto Gallery -->
+      <section class="gallery">
+        <h3>Foto Galeri</h3>
+        <div class="gallery-grid">
+          <img src="../images/foto1.jpg" alt="Foto 1" />
+          <img src="../images/foto2.jpg" alt="Foto 2" />
+          <img src="../images/foto3.jpg" alt="Foto 3" />
+        </div>
+      </section>
+
+      <!-- Guestbook -->
+      <section class="guestbook">
+        <h3>Guestbook (Tamu)</h3>
+        <form id="guestForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Nama"
+            required
+            maxlength="50"
+          />
+          <!-- Tambahan pilihan hadir / tidak hadir -->
+          <select id="status" required>
+            <option value="">Pilih Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+          </select>
+          <textarea
+            id="message"
+            placeholder="Doa / Ucapan"
+            required
+            maxlength="300"
+          ></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+
+        <div id="loader" class="loader">Memuat tamu...</div>
+        <ul id="entries" class="entries"></ul>
+      </section>
+
+      <footer class="footer">
+        &copy; <span id="year"></span> Keluarga — Semua tamu dapat melihat
+        guestbook ini.
+      </footer>
+    </main>
+
+    <!-- Firebase SDK (modular v9+) via CDN -->
+    <script type="module" src="../script.js"></script>
+  </body>
+</html>
